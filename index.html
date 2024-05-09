@@ -7,7 +7,237 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1></h1>
+  <body class="bg-purplevol-1200">
+    <div class="flex relative">
+      <aside
+        class="flex flex-col justify-between items-center w-[100px] h-[100vh] bg-purplevol-1000 shadow-custom z-10 absolute"
+      >
+        <img src="images/logo.svg" alt="logo" class="my-7" />
+        <div class="flex flex-col justify-between h-full" id="nav-item1">
+          <nav
+            class="nav-list flex flex-col justify-evenly items-center h-[588px]"
+          >
+            <div
+              class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
+              id="inventory"
+            >
+              <a href="#box"
+                ><img
+                  src="images/inventory.svg"
+                  alt="#"
+                  class="hover:scale-110 hover:fill-white"
+              /></a>
+            </div>
+            <div
+              class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
+              id="customers"
+            >
+              <a href="#customers"
+                ><img
+                  src="images/customers.svg"
+                  alt="#"
+                  class="hover:scale-110 hover:fill-white"
+                />
+              </a>
+            </div>
+            <div
+              class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
+              id="orders"
+            >
+              <a href="#"
+                ><img
+                  src="images/orders.svg"
+                  alt="#"
+                  class="hover:scale-110 hover:fill-white"
+              /></a>
+            </div>
+            <div
+              class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
+              id="shipments"
+            >
+              <a href="#"
+                ><img
+                  src="images/shipment.svg"
+                  alt="#"
+                  class="hover:scale-110 hover:fill-white"
+              /></a>
+            </div>
+            <div
+              class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
+              id="discounts"
+            >
+              <a href="#"
+                ><img
+                  src="images/discount.svg"
+                  alt="#"
+                  class="hover:scale-110 hover:fill-white"
+              /></a>
+            </div>
+            <div
+              class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
+              id="notifications"
+            >
+              <a href="#"
+                ><img
+                  src="images/notification.svg"
+                  alt="#"
+                  class="hover:scale-110 hover:fill-white"
+              /></a>
+            </div>
+            <div
+              class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
+              id="downloads"
+            >
+              <a href="#"
+                ><img
+                  src="images/download.svg"
+                  alt="#"
+                  class="hover:scale-110 hover:fill-white"
+              /></a>
+            </div>
+            <div
+              class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
+              id="settings"
+            >
+              <a href="#"
+                ><img
+                  src="images/settings.svg"
+                  alt="#"
+                  class="hover:scale-110 hover:fill-white"
+              /></a>
+            </div>
+          </nav>
+          <div class="mb-7">
+            <p
+              class="bg-orangeLight p-5 rounded-full inline-block text-white font-sans text-14"
+            >
+              AM
+            </p>
+          </div>
+        </div>
+      </aside>
+      <div
+        class="h-[100vh] w-[236px] bg-[#1D1D41] absolute hidden rounded-tr-[20px] rounded-br-[20px]"
+        id="popoutNav"
+      >
+        <div
+          class="absolute w-5 h-14 right-0 top-7 flex justify-center items-center bg-[#2F2F5C] rounded-tl-[14px] rounded-bl-[14px]"
+          id="closeSidePopout"
+        >
+          <img src="images/backsingle.svg" alt="close arrow" />
+        </div>
+        <div id="navContainer"></div>
+        <h1 class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold">
+          Inventory
+        </h1>
+        <nav
+          class="flex flex-col gap-4 justify-center items-center mt-14"
+          id="navContainer"
+        >
+          <div>
+            <p
+              class="text-16 text-white text-center font-bold hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl"
+            >
+              {data.type}
+            </p>
+          </div>
+          <div>
+            <p
+              class="text-16 text-white text-center font-bold hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl"
+            >
+              {data.kind}
+            </p>
+          </div>
+          <div>
+            <p
+              class="text-16 text-white text-center hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl"
+            >
+              {data.status}
+            </p>
+          </div>
+        </nav>
+      </div>
+    </div>
   </body>
 </html>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navItems = document.querySelectorAll(".nav-list a");
+    const popoutSideNav = document.getElementById("popoutNav");
+    const closeSidePopout = document.getElementById("closeSidePopout");
+
+    navItems.forEach((navItem) => {
+      navItem.addEventListener("click", (e) => {
+        popoutSideNav.classList.add(
+          "block",
+          "ml-[100px]",
+          "animate-slide-right"
+        );
+        popoutSideNav.classList.remove("hidden", "animate-slide-left");
+        console.log("Updated Class List:", popoutSideNav.classList);
+      });
+    });
+    closeSidePopout.addEventListener("click", (e) => {
+      popoutSideNav.classList.toggle("hidden");
+      popoutSideNav.classList.remove("hidden", "animate-slide-right");
+      popoutSideNav.classList.add("animate-slide-left");
+
+      console.log("Updated Class List:", popoutSideNav.classList);
+    });
+  });
+
+  // fetch("index.json")
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     const navContainer = document.getElementById("navContainer");
+  //     data.forEach((item) => {
+  //       const div = document.getElementById("navContainer");
+  //       div.innerHTML = ` <h1 class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold">
+  //         ${item.heading}
+  //       </h1>
+  //       <nav
+  //         class="flex flex-col gap-4 justify-center items-center mt-14"
+  //         id="navContainer"
+  //       >
+  //         <div>
+  //           <p
+  //             class="text-16 text-white text-center font-bold hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl"
+  //           >
+  //             ${item.type}
+  //           </p>
+  //         </div>
+  //         <div>
+  //           <p
+  //             class="text-16 text-white text-center font-bold hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl"
+  //           >
+  //             ${item.kind}
+  //           </p>
+  //         </div>
+  //         <div>
+  //           <p
+  //             class="text-16 text-white text-center hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl"
+  //           >
+  //      subscription
+  //           </p>
+  //         </div>
+  //       </nav>
+
+  //     `;
+  //     });
+  //   });
+  // const navContainer = document.getElementById("navContainer");
+  // const headingDisplay = document.getElementById("headingDisplay");
+
+  // jsonData.forEach((item) => {
+  //   const navItem = document.createElement("div");
+  //   navItem.innerHTML = `
+  //   <p class="text-16 text-white text-center font-bold hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl" data-id="${item.id}">
+  //     ${item.type}
+  //   </p>
+  // `;
+  //   navItem.addEventListener("click", () => {
+  //     headingDisplay.textContent = item.heading;
+  //   });
+  //   navContainer.appendChild(navItem);
+  // });
+</script>

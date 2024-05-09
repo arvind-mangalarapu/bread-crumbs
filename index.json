@@ -1,0 +1,50 @@
+[
+  {
+    "id": "inventory",
+    "heading": "Inventory",
+    "type": "active orders",
+    "kind": "COD order"
+  },
+  {
+    "id": "customers",
+    "heading": "Customers",
+    "type": "active orders",
+    "kind": "COD order"
+  },
+  {
+    "id": "orders",
+    "heading": "Orders",
+    "type": "active orders",
+    "kind": "COD order"
+  },
+  {
+    "id": "shipments",
+    "heading": "Shipments",
+    "type": "active orders",
+    "kind": "COD order"
+  },
+  {
+    "id": "discounts",
+    "heading": "Discounts",
+    "type": "active orders",
+    "kind": "COD order"
+  },
+  {
+    "id": "notifications",
+    "heading": "Notifications",
+    "type": "active orders",
+    "kind": "COD order"
+  },
+  {
+    "id": "downloads",
+    "heading": "Downloads",
+    "type": "active orders",
+    "kind": "COD order"
+  },
+  {
+    "id": "settings",
+    "heading": "Settings",
+    "type": "active orders",
+    "kind": "COD order"
+  }
+]
