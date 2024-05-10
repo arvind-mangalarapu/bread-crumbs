@@ -224,7 +224,7 @@
         <div
           class="bg-purplevol-1000 w-[250px] h-[116px] flex items-center justify-center rounded-[20px]"
         >
-          <div class="flex justify-evenly items-center">
+          <div class="flex gap-6 items-center">
             <div
               class="h-16 w-16 bg-orangeLight flex items-center justify-center rounded-2xl"
             >
@@ -279,6 +279,257 @@
         >
           <img src="images/horizontal lines.svg" alt="lines" />
           <p class="text-14 text-white">Columns</p>
+        </div>
+      </div>
+      <div
+        class="flex justify-evenly bg-purplevol-1000 p-6 mt-5 rounded-3xl flex-wrap"
+      >
+        <div class="flex flex-col gap-2">
+          <h2 class="text-purplevol-500 uppercase tracking-[7%] text-12">
+            Order Status
+          </h2>
+          <div class="bg-purplevol-900 rounded-xl text-white p-4">
+            <select
+              name="orderStatus"
+              id="OrderStatus"
+              class="bg-purplevol-900"
+            >
+              <option value="option1">All</option>
+              <option value="option2">Order Confirmed</option>
+              <option value="option3">Pending order confirmation</option>
+              <optgroup label="Cancellation">
+                <option value="option5">Order cancelled</option>
+                <option value="option6">Order refunded</option>
+                <option value="option7">Refund issued</option>
+              </optgroup>
+              <optgroup label="Stock Update" class="text-red-500">
+                <option value="option8">Pending stock deduction</option>
+                <option value="option9">Pending stock revert</option>
+                <option value="option10">Stock reverted</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="text-purplevol-500 uppercase tracking-[7%] text-12">
+            Shipment Status
+          </h2>
+          <div class="bg-purplevol-900 rounded-xl text-white p-4">
+            <select
+              name="shipmentStatus"
+              id="shipmentStatus"
+              class="bg-purplevol-900 rounded-xl text-white"
+            >
+              <option value="option1">All</option>
+              <option value="option2">Shipment Delivered</option>
+              <option value="option3">Shipment Cancelled</option>
+              <option value="option4">Shipment Generated</option>
+              <option value="option5">Shipment Generation Error</option>
+              <option value="option6">Shipment Shipped</option>
+              <option value="option7">Shipment in rewiew</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="text-purplevol-500 uppercase tracking-[7%] text-12">
+            Payment Status
+          </h2>
+          <div class="bg-purplevol-900 rounded-xl text-white p-4">
+            <select
+              name="paymentStatus"
+              id="paymentStatus"
+              class="bg-purplevol-900 rounded-xl text-white"
+            >
+              <option value="option1">All</option>
+              <option value="option2">Sucessful</option>
+              <option value="option3">Pending</option>
+              <option value="option4">Failed</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="text-purplevol-500 uppercase tracking-[7%] text-12">
+            Payment meathod
+          </h2>
+          <div class="bg-purplevol-900 rounded-xl text-white p-4">
+            <select
+              name="paymentMethod"
+              id="paymentMethod"
+              class="bg-purplevol-900 rounded-xl text-white"
+            >
+              <option value="option1">All</option>
+              <option value="option2">COD(cash on delivery)</option>
+              <option value="option3">Credit Card</option>
+              <option value="option4">Debit Card</option>
+              <option value="option5">Net Banking</option>
+              <option value="option6">Wallet</option>
+              <option value="option7">Paytm</option>
+              <option value="option8">UPI</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-purplevol-1000 mt-5 px-5 py-6 rounded-3xl">
+        <table class="text-white w-[100%] text-left table-auto">
+          <tr class="h-[30px] border-b-[0.5px] border-purplevol-800">
+            <th
+              class="flex gap-5 text-12 font-semibold tracking-[7%] uppercase text-purplevol-500"
+            >
+              Order Number <img src="images/upArrow.svg" alt="up" />
+            </th>
+            <th
+              class="text-12 font-semibold tracking-[7%] uppercase text-purplevol-500"
+            >
+              Customer Name
+            </th>
+            <th
+              class="flex gap-5 text-12 font-semibold tracking-[7%] uppercase text-purplevol-500"
+            >
+              Order date <img src="images/upArrow.svg" alt="up" />
+            </th>
+            <th
+              class="text-12 font-semibold tracking-[7%] uppercase text-purplevol-500"
+            >
+              Status
+            </th>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-orangeDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-greenDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-orangeDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-orangeDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-orangeDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-blueDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-orangeDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-orangeDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-redDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-greenDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-orangeDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+          <tr class="h-[45px] border-b-[0.5px] border-purplevol-800 text-14">
+            <td>289765432</td>
+            <td>Aartav Saxena</td>
+            <td>Fri 26 Apr, 2024 06:31 am</td>
+            <td class="flex items-center justify-start gap-2">
+              <div class="bg-redDark h-3 w-3 rounded-full"></div>
+              On Hold
+            </td>
+          </tr>
+        </table>
+        <div class="flex gap-10 items-center">
+          <p class="text-purplevol-500 mt-5 text-12 font-medium">
+            1 - 10 of 200
+          </p>
+          <div
+            class="flex items-center justify-center gap-3 text-purplevol-500 mt-5 text-12 font-medium"
+          >
+            <p class="text-purplevol-500 text-12 font-medium">Display</p>
+            <div class="bg-purplevol-900 px-4 py-2 rounded-lg">
+              <select
+                name="shipmentStatus"
+                id="shipmentStatus"
+                class="bg-purplevol-900 text-white"
+              >
+                <option value="option1">1</option>
+                <option value="option2">2</option>
+                <option value="option3">3</option>
+                <option value="option4">4</option>
+                <option value="option5">5</option>
+                <option value="option6">6</option>
+                <option value="option7">7</option>
+                <option value="option8">8</option>
+                <option value="option9">9</option>
+                <option value="option10">10</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </section>
