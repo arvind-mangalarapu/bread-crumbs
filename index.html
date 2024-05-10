@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-purplevol-1200">
-    <div class="flex relative">
+  <body class="bg-purplevol-1200 flex">
+    <div class="flex relative w-[350px]">
+      <!-- side nav -->
       <aside
         class="flex flex-col justify-between items-center w-[100px] h-[100vh] bg-purplevol-1000 shadow-custom z-10 absolute"
       >
@@ -17,95 +18,78 @@
           <nav
             class="nav-list flex flex-col justify-evenly items-center h-[588px]"
           >
-            <div
+            <a
+              href="#inventory"
               class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
-              id="inventory"
-            >
-              <a href="#box"
-                ><img
-                  src="images/inventory.svg"
-                  alt="#"
-                  class="hover:scale-110 hover:fill-white"
-              /></a>
-            </div>
-            <div
+              ><img
+                src="images/inventory.svg"
+                alt="#"
+                class="hover:scale-110 hover:fill-white"
+            /></a>
+
+            <a
+              href="#customers"
               class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
-              id="customers"
-            >
-              <a href="#customers"
-                ><img
-                  src="images/customers.svg"
-                  alt="#"
-                  class="hover:scale-110 hover:fill-white"
-                />
-              </a>
-            </div>
-            <div
+              ><img
+                src="images/customers.svg"
+                alt="#"
+                class="hover:scale-110 hover:fill-white"
+              />
+            </a>
+
+            <a
+              href="#orders"
               class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
-              id="orders"
-            >
-              <a href="#"
-                ><img
-                  src="images/orders.svg"
-                  alt="#"
-                  class="hover:scale-110 hover:fill-white"
-              /></a>
-            </div>
-            <div
+              ><img
+                src="images/orders.svg"
+                alt="#"
+                class="hover:scale-110 hover:fill-white"
+            /></a>
+
+            <a
+              href="#shipments"
               class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
-              id="shipments"
-            >
-              <a href="#"
-                ><img
-                  src="images/shipment.svg"
-                  alt="#"
-                  class="hover:scale-110 hover:fill-white"
-              /></a>
-            </div>
-            <div
+              ><img
+                src="images/shipment.svg"
+                alt="#"
+                class="hover:scale-110 hover:fill-white"
+            /></a>
+
+            <a
+              href="#discounts"
               class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
-              id="discounts"
-            >
-              <a href="#"
-                ><img
-                  src="images/discount.svg"
-                  alt="#"
-                  class="hover:scale-110 hover:fill-white"
-              /></a>
-            </div>
-            <div
+              ><img
+                src="images/discount.svg"
+                alt="#"
+                class="hover:scale-110 hover:fill-white"
+            /></a>
+
+            <a
+              href="#notifications"
               class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
-              id="notifications"
-            >
-              <a href="#"
-                ><img
-                  src="images/notification.svg"
-                  alt="#"
-                  class="hover:scale-110 hover:fill-white"
-              /></a>
-            </div>
-            <div
+              ><img
+                src="images/notification.svg"
+                alt="#"
+                class="hover:scale-110 hover:fill-white"
+            /></a>
+
+            <a
+              href="#downloads"
               class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
-              id="downloads"
-            >
-              <a href="#"
-                ><img
-                  src="images/download.svg"
-                  alt="#"
-                  class="hover:scale-110 hover:fill-white"
-              /></a>
-            </div>
-            <div
+              ><img
+                src="images/download.svg"
+                alt="#"
+                class="hover:scale-110 hover:fill-white"
+            /></a>
+
+            <a
+              href="#settings"
               class="hover:bg-[#2F2F5C] h-14 w-14 rounded-lg flex justify-center items-center"
-              id="settings"
-            >
-              <a href="#"
-                ><img
-                  src="images/settings.svg"
-                  alt="#"
-                  class="hover:scale-110 hover:fill-white"
-              /></a>
-            </div>
+              ><img
+                src="images/settings.svg"
+                alt="#"
+                class="hover:scale-110 hover:fill-white"
+            /></a>
           </nav>
           <div class="mb-7">
             <p
@@ -116,6 +100,7 @@
           </div>
         </div>
       </aside>
+      <!-- popout nav -->
       <div
         class="h-[100vh] w-[236px] bg-[#1D1D41] absolute hidden rounded-tr-[20px] rounded-br-[20px]"
         id="popoutNav"
@@ -126,10 +111,54 @@
         >
           <img src="images/backsingle.svg" alt="close arrow" />
         </div>
-        <div id="navContainer"></div>
-        <h1 class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold">
+        <h1
+          class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold hidden target:block"
+          id="inventory"
+        >
           Inventory
         </h1>
+        <h1
+          class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold hidden target:block"
+          id="customers"
+        >
+          Customers
+        </h1>
+        <h1
+          class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold hidden target:block"
+          id="orders"
+        >
+          Orders
+        </h1>
+        <h1
+          class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold hidden target:block"
+          id="shipments"
+        >
+          Shipments
+        </h1>
+        <h1
+          class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold hidden target:block"
+          id="discounts"
+        >
+          Discounts
+        </h1>
+        <h1
+          class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold hidden target:block"
+          id="notifications"
+        >
+          Notifications
+        </h1>
+        <h1
+          class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold hidden target:block"
+          id="downloads"
+        >
+          Downloads
+        </h1>
+        <div class="hidden target:block" id="settings">
+          <p class="text-20 space-x-[10%] text-white mt-6 ml-11 font-bold">
+            Settings
+          </p>
+        </div>
+
         <nav
           class="flex flex-col gap-4 justify-center items-center mt-14"
           id="navContainer"
@@ -138,28 +167,124 @@
             <p
               class="text-16 text-white text-center font-bold hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl"
             >
-              {data.type}
+              Active orders
             </p>
           </div>
           <div>
             <p
               class="text-16 text-white text-center font-bold hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl"
             >
-              {data.kind}
+              COD orders
             </p>
           </div>
           <div>
             <p
               class="text-16 text-white text-center hover:bg-purplevol-400 w-48 h-14 flex justify-center items-center rounded-2xl"
             >
-              {data.status}
+              subscriptions
             </p>
           </div>
         </nav>
       </div>
     </div>
+    <!-- main page -->
+
+    <section class="left-[350px] h-[100vh] flex-1 max-w-[90%] mx-auto p-6">
+      <p class="text-[#EAE9FD] font-thin text-14 flex items-baseline gap-2">
+        Orders<img src="images/forwardSingle.svg" alt="3" />
+      </p>
+      <div class="flex justify-between items-center w-full">
+        <p class="text-white text-30 leading-9 font-semibold">Active Orders</p>
+        <p
+          class="text-[#EAE9FD] font-thin text-14 flex items-center gap-2 px-8 py-4 bg-purplevol-400 rounded-xl"
+        >
+          <img src="images/plus.svg" alt="plus" /> New Order
+        </p>
+      </div>
+      <div class="flex gap-6 items-center">
+        <div
+          class="bg-purplevol-1000 w-[250px] h-[116px] flex items-center justify-center rounded-[20px]"
+        >
+          <div class="flex justify-evenly w-full items-center">
+            <div
+              class="h-16 w-16 bg-greenLight flex items-center justify-center rounded-2xl"
+            >
+              <img src="images/tick(Stroke) (1).svg" alt="tick" />
+            </div>
+            <div>
+              <p
+                class="text-12 font-semibold tracking-[7%] uppercase text-[#8C89B4] w-20"
+              >
+                Orders Confirmed
+              </p>
+              <p class="text-32 font-bold text-white">500</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-purplevol-1000 w-[250px] h-[116px] flex items-center justify-center rounded-[20px]"
+        >
+          <div class="flex justify-evenly items-center">
+            <div
+              class="h-16 w-16 bg-orangeLight flex items-center justify-center rounded-2xl"
+            >
+              <img src="images/dots.svg" alt="dots" />
+            </div>
+            <div>
+              <p
+                class="text-12 font-semibold tracking-[7%] uppercase text-[#8C89B4] w-28"
+              >
+                Pending Orders Confirmed
+              </p>
+              <p class="text-32 font-bold text-white">500</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- input fields -->
+      <div class="flex gap-4 mt-7">
+        <div
+          class="bg-purplevol-1000 rounded-xl overflow-hidden shadow-lg flex-1"
+        >
+          <div class="flex items-center justify-between px-4 py-2">
+            <img src="images/Search Icon.svg" alt="searchInput" />
+            <input
+              type="search"
+              placeholder="Search for name, email, product, variant, SKU, or coupon code...."
+              class="w-full py-2 px-4 outline-none focus:ring-2 focus:ring-blue-500 rounded-lg bg-purplevol-1000 placeholder-purplevol-700"
+              id="searchInput"
+            />
+          </div>
+        </div>
+        <div
+          class="max-w-max mx-auto rounded-xl flex-1 py-2 px-4 bg-purplevol-900"
+        >
+          <input
+            type="date"
+            id="datepicker"
+            name="datepicker"
+            class="block w-full px-4 py-2 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-purplevol-900 text-white"
+            img
+          />
+        </div>
+        <div
+          class="max-w-max mx-auto rounded-xl flex-1 py-5 px-4 bg-purplevol-900 flex items-center justify-between gap-3"
+        >
+          <img src="images/vertical-lines.svg" alt="lines" />
+          <p class="text-14 text-white">Filter</p>
+        </div>
+        <div
+          class="max-w-max mx-auto rounded-xl flex-1 py-5 px-4 bg-purplevol-900 flex items-center justify-between gap-3"
+        >
+          <img src="images/horizontal lines.svg" alt="lines" />
+          <p class="text-14 text-white">Columns</p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const navItems = document.querySelectorAll(".nav-list a");
